@@ -1,0 +1,13 @@
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-width: 0.5;
+}
+
+.text-field:nth-child(3n) {
+    -fx-border-right-width: 2;
+}
+
+.text-field:focused {
+    -fx-background-color: #e6f0ff;
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="679.0" prefWidth="928.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javafxsudoku.MenuController">
+    <ComboBox fx:id="difficultiesComboBox" layoutX="14.0" layoutY="37.0" prefHeight="25.0" prefWidth="127.0" promptText="Difficult" />
+    <Button fx:id="buttonNewBoard" layoutX="14.0" layoutY="85.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="127.0" text="New Board" />
+    <Button fx:id="restartButton" layoutX="14.0" layoutY="134.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="127.0" text="Restart" />
+   <Button fx:id="hintButton" layoutX="14.0" layoutY="190.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="127.0" text="Hint" />
+   <GridPane fx:id="sudokuGrid" layoutX="175.0" layoutY="37.0" prefHeight="411.0" prefWidth="712.0">
+   </GridPane>
+</AnchorPane>
