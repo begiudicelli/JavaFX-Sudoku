@@ -11,9 +11,8 @@ public class SudokuGenerator {
     public SudokuGenerator(Board board) {
         this.board = board;
     }
-    public void generateBoard(Difficulties difficulty) {
+    public void generateBoard() {
         fillBoard();
-        removeCellsBasedOnDifficulty(difficulty);
     }
 
     private void fillBoard() {
@@ -77,7 +76,7 @@ public class SudokuGenerator {
         return true;
     }
 
-    private void removeCellsBasedOnDifficulty(Difficulties difficulty) {
+    public Board removeCellsBasedOnDifficulty(Difficulties difficulty, Board board) {
         int cellsToRemove = getCellsToRemove(difficulty);
         while (cellsToRemove > 0) {
             int row = (int) (Math.random() * SIZE);
@@ -88,6 +87,15 @@ public class SudokuGenerator {
                 cellsToRemove--;
             }
         }
+
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                if(board.getCell(i,j).getValue() != 0){
+                    board.getCell(i,j).setFixed(true);
+                }
+            }
+        }
+        return board;
     }
 
     private int getCellsToRemove(Difficulties difficulty) {
@@ -96,5 +104,9 @@ public class SudokuGenerator {
             case MEDIUM -> 45;
             case HARD -> 55;
         };
+    }
+
+    public Board getBoard() {
+        return board;
     }
 }

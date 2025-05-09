@@ -12,5 +12,11 @@ module org.example.javafxsudoku {
     requires com.almasb.fxgl.all;
 
     opens org.example.javafxsudoku to javafx.fxml;
-    exports org.example.javafxsudoku;
+
+    exports org.example.javafxsudoku.controller;
+    opens org.example.javafxsudoku.controller to javafx.fxml;
+    exports org.example.javafxsudoku.view;
+    opens org.example.javafxsudoku.view to javafx.fxml;
+
+
 }
