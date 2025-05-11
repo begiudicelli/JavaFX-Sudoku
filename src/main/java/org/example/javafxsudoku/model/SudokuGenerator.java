@@ -12,10 +12,6 @@ public class SudokuGenerator {
         this.board = board;
     }
     public void generateBoard() {
-        fillBoard();
-    }
-
-    private void fillBoard() {
         fillBoardRecursively(0, 0);
     }
 

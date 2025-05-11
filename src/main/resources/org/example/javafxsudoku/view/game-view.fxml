@@ -2,12 +2,23 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="checkAnswerButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="679.0" prefWidth="928.0" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javafxsudoku.controller.GameController">
+<AnchorPane fx:id="checkAnswerButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="679.0" prefWidth="928.0" stylesheets="@../sudoku.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javafxsudoku.controller.GameController">
     <ComboBox fx:id="difficultiesComboBox" layoutX="14.0" layoutY="37.0" prefHeight="25.0" prefWidth="127.0" promptText="Difficult" />
-    <Button fx:id="buttonNewBoard" layoutX="14.0" layoutY="85.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="127.0" text="New Board" />
-   <Button fx:id="buttonCompleteAnswer" layoutX="14.0" layoutY="138.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="127.0" text="Hint" />
-   <GridPane fx:id="sudokuGrid" layoutX="175.0" layoutY="37.0" prefHeight="411.0" prefWidth="712.0">
+    <Button fx:id="buttonNewBoard" layoutX="14.0" layoutY="88.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="127.0" text="New Board" />
+   <Button fx:id="buttonCompleteAnswer" layoutX="14.0" layoutY="139.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="127.0" text="Hint" />
+   <GridPane fx:id="sudokuGrid" layoutX="172.0" layoutY="50.0" prefHeight="411.0" prefWidth="712.0">
    </GridPane>
-   <Button fx:id="buttonCheckAnswer" layoutX="14.0" layoutY="189.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="127.0" text="Check Answer" />
+   <Button fx:id="buttonCheckAnswer" layoutX="14.0" layoutY="243.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="127.0" text="Check Answer" />
+   <Button fx:id="buttonCheckCell" layoutX="14.0" layoutY="191.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="127.0" text="Check Cell" />
+   <Label fx:id="labelHintCount" layoutX="14.0" layoutY="353.0" prefHeight="25.0" prefWidth="144.0" text="Hints: 3">
+      <font>
+         <Font size="14.0" />
+      </font></Label>
+   <Label fx:id="labelCheckCellsCount" layoutX="14.0" layoutY="315.0" prefHeight="25.0" prefWidth="144.0" text="Check cells : 3 ">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
 </AnchorPane>

@@ -7,7 +7,7 @@ public class Board {
         this.cells = new Cell[9][9];
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
-                cells[i][j] = new Cell(0, false);
+                cells[i][j] = new Cell(0, false, i, j);
             }
         }
     }
@@ -20,6 +20,7 @@ public class Board {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 cells[i][j].setValue(0);
+                cells[i][j].setFixed(false);
             }
         }
     }
@@ -29,7 +30,7 @@ public class Board {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 Cell originalCell = this.getCell(i, j);
-                Cell copiedCell = new Cell(originalCell.getValue(), originalCell.isFixed());
+                Cell copiedCell = new Cell(originalCell.getValue(), originalCell.isFixed(), i, j);
                 copy.setCell(i, j, copiedCell);
             }
         }
@@ -38,6 +39,8 @@ public class Board {
 
     public void setCell(int row, int col, Cell cell) {
         cells[row][col] = cell;
+        cell.setRow(row);
+        cell.setCol(col);
     }
 
     public Cell getCell(int row, int col) {

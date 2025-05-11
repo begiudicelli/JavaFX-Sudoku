@@ -12,6 +12,7 @@ public class SudokuApp extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("game-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+        scene.getStylesheets().add(getClass().getResource("/org/example/javafxsudoku/sudoku.css").toExternalForm());
         stage.setTitle("Sudoku!");
         stage.setScene(scene);
         stage.show();
