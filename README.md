@@ -47,7 +47,6 @@ Essa separação facilita manutenção e evolução do sistema.
 ## Como Executar
 
 1. Clone o repositório:
-   git clone https://github.com/begiudicelli/seu-repositorio
 
 2. Abra o projeto em uma IDE (Eclipse, IntelliJ, etc.)
 
